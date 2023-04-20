@@ -1,5 +1,7 @@
 "use strict";
 
+const postAPI = "https://api.dataforsyningen.dk/postnumre";
+
 window.addEventListener("load", start);
 
 function start() {
@@ -12,14 +14,32 @@ function start() {
 function submitting(event) {
   console.log(event);
   event.preventDefault();
+  buildObject(event);
+}
+function buildObject(event) {
+  const elements = document.querySelector("#form").elements;
+  const data = {
+    navn: elements.name.value,
+    gade: elements.street.value,
+    husnummer: elements.house_number.value,
+    postnummer: elements.postal_number.value,
+    by: elements.city.value,
+    co: elements.co.value,
+    telefon: elements.telephone.value,
+    email: elements.email.value,
+  };
+  console.log(data);
 }
 
-function postalInput(event) {
-  console.log(`given event: ${event}`);
+async function postalInput(event) {
   const postalNumber = document.querySelector("#postal_number").value;
   console.log(`post input: ${postalNumber}`);
   if (postalNumber.length == 4) {
-    console.log("input is legal");
+    const rawData = await fetch(postAPI + "/" + postalNumber, {
+      method: "GET",
+    });
+    const data = await rawData.json();
+    console.log(data);
+    document.querySelector("#city").value = `${data.navn}`;
   }
-  console.log("postalInput");
 }
