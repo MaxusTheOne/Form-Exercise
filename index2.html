@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="formcarry-container">
+      <form action="">
+        <fieldset>
+          <legend>Form</legend>
+          <div class="">
+            <label for="name">
+              <input type="text" id="name" />
+              Navn
+            </label>
+          </div>
+          <div class="grid-box">
+            <label for="street"
+              >Gade/vej
+              <input type="text" id="street" />
+            </label>
+            <label for="house_number"
+              >Husnummer
+              <input type="text" id="house_number" />
+            </label>
+          </div>
+          <div class="grid-box">
+            <label for="postal_number"
+              >Post nummer
+              <input type="text" id="postal_number" />
+            </label>
+            <label for="city"
+              >By
+              <input type="text" id="city" readonly></input>
+            </label>
+          </div>
+          <div>
+            <label for="co">
+              <input type="text" id="co" />
+              Evt. C/O adresse (frivilligt)
+            </label>
+          </div>
+          <div>
+            <label for="telephone">
+              <input type="number" id="telephone" />
+              Telefonnummer (frivilligt)
+            </label>
+          </div>
+          <div>
+            <label for="email">
+              <input type="email" id="email" />
+              E-mail
+            </label>
+          </div>
+          <input type="submit" id="submit" />
+        </fieldset>
+      </form>
+    </section>
+    <script src="searchForm.js"></script>
+  </body>
+</html>

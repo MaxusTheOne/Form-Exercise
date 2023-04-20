@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <section class="formcarry-container">
+      <fieldset>
+      <form action="" method="post" id="signup">
+        <div class="formcarry-block">
+          <label for="name"
+            >Full Name
+            <input type="text" name="fullname" id="fullname" placeholder="Your first and last name" required />
+          </label>
+        </div>
+          <div class="formcarry-block">
+            <label for="email"
+              >Your Email Address
+              <input type="email" name="email" id="email" placeholder="john@doe.com" required />
+            </label>
+          </div>
+          <fieldset>
+          <legend>Site data</legend>
+          <div class="formcarry-block">
+            <label for="userName"
+              >User name
+              <input type="text" id="userName" required />
+            </label>
+          </div>
+          <div class="formcarry-block">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <div class="formcarry-block">
+            <label for="repeatPassword">Repeat password</label>
+            <input type="password" id="repeatPassword" required />
+          </div>
+          </fieldset>
+          <fieldset id="payment">
+          <legend>Payment</legend>
+          <div class="formcarry-block" id="payment-block">
+            <label for="free">
+              <input type="radio" name="payment" value="free" />
+              free
+            </label>
+            <label for="cheap">
+              <input type="radio" name="payment" value="cheap" />
+              cheap
+            </label>
+            <label for="fair">
+              <input type="radio" name="payment" value="fair" checked />
+              Fair
+            </label>
+            <label for="expensive">
+              <input type="radio" name="payment" value="expensive" />
+              Expensive
+            </label>
+          </div>
+            <label for="pay-period"
+              >Pay every:
+              <select name="paymentPlan" id="payment-plan">
+                <option value="Week">Week</option>
+                <option value="Week">Month</option>
+                <option value="Week">Year</option>
+              </select>
+            </label>
+          </fieldset>
+          <div class="formcarry-block">
+            <label for="emailAccept">I would like to recieve email</label>
+            <input type="checkbox" id="emailAccept" checked />
+          </div>
+          <div class="formcarry-block">
+            <label for="terms_conditions">I have accepted terms and conditions</label>
+            <input type="checkbox" id="terms_conditions" required />
+          </div>
+          <div class="formcarry-block">
+            <input type="submit" id="btn-submit" />
+            <input type="reset" />
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
