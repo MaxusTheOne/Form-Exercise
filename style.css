@@ -1,6 +1,5 @@
+/* exercise1 */
 .formcarry-container {
-  /* display: flex; */
-  /* box-sizing: border-box; */
   margin: 40px auto 0 auto;
   padding: 0;
   font-family: "Inter", sans-serif;
@@ -21,4 +20,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+}
+/* exercise3 */
+.rgb_grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+}
+#rgb_block {
+  background-color: rgb(3, 5, 90);
+  margin: 4px;
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <fieldset class="formcarry-container rgb_grid">
+      <legend>sliders</legend>
+      <div>
+        <div>
+          <label for="red" id="red_label">R:</label>
+        </div>
+        <div>
+          <label for="green" id="green_label">G:</label>
+        </div>
+        <div>
+          <label for="blue" id="blue_label">B:</label>
+        </div>
+      </div>
+      <div>
+        <input type="range" id="red" min="0" max="255" />
+        <input type="range" id="green" min="0" max="255" />
+        <input type="range" id="blue" min="0" max="255" />
+      </div>
+      <div id="rgb_block"></div>
+    </fieldset>
+    <script src="exercise3.js"></script>
+  </body>
+</html>
